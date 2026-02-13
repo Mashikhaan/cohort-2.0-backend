@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background: gray;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.notes{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.note{
+    background: ghostwhite;
+    padding-inline: 2rem;
+    padding-block: 1rem;
+    margin-block: 2rem;
+    margin-inline: 1.4rem;
+    border-radius: 1rem;
+
+}
+
+.note-form{
+    display: flex;
+    gap: 2rem;
+    margin-block: 2rem;
+    margin-inline: 3rem;
+}
+
+.note-form input{
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+.note-form button{
+    padding-block: 1rem;
+    padding-inline: 2rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background:orange
+}
+
+#deletebtn{
+    margin: 1rem 2rem;
+    padding: .5rem 1rem;;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: red;
+}
+
+#editbtn{
+    margin: 1rem 2rem;
+    padding: .5rem 1rem;;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    cursor: pointer;
+    background: green;
+    color: white;
+}
