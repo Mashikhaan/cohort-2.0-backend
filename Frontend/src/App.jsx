@@ -35,7 +35,7 @@ const App = () => {
   
   /* GET NOTES */
   function fetchNotes(){
-    axios.get("http://localhost:3000/api/notes")
+    axios.get("/api/notes")
   .then((res)=>{
     console.log(res.data.notes);
     setNotes(res.data.notes)
@@ -54,7 +54,7 @@ function addNote(e){
   const {title,description} = e.target.elements
   console.log(title.value,description.value);
 
-  axios.post("http://localhost:3000/api/notes",{
+  axios.post("/api/notes",{
     title:title.value,
     description:description.value
   })
@@ -71,7 +71,7 @@ function addNote(e){
 
 /* DELETE/api/notes */
 function deleteNotes(id){
-axios.delete(`http://localhost:3000/api/notes/${id}`)
+axios.delete(`/api/notes/${id}`)
 .then((res)=>{
   console.log(res.data);
  fetchNotes()
@@ -82,7 +82,7 @@ axios.delete(`http://localhost:3000/api/notes/${id}`)
 
 function editNotes(id,description){
   if(!description) return
-  axios.patch(`http://localhost:3000/api/notes/${id}`,{
+  axios.patch(`/api/notes/${id}`,{
     description:description
   })
   .then((res)=>{
